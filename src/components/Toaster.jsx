@@ -1,5 +1,5 @@
 // utils/toaster.js
-import { toast, Slide, Zoom, Flip, Bounce } from "react-toastify";
+import { toast, Bounce } from "react-toastify";
 
 /**
  * Display a toast message
@@ -35,9 +35,11 @@ export const Toaster = (type, message, overrides = {}) => {
     draggable: true,
     theme: "colored",
     transition: Bounce,
-    className: "rounded-xl shadow-lg top-20 p-4 text-sm font-bold rounded-md", 
-    bodyClassName: "text-gray-700 font-bold", 
-    progressClassName: "bg-blue-500", 
+
+    className: "rounded-xl shadow-lg p-4 text-sm font-bold max-w-[90vw] sm:max-w-sm w-full",
+    bodyClassName: "text-gray-700 font-semibold break-words",
+    progressClassName: "bg-blue-500",
+
     ...overrides,
   });
 };
